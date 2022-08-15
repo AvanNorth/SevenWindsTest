@@ -18,7 +18,8 @@ application {
 }
 
 repositories {
-    mavenCentral()
+    mavenCentral();
+    maven { url = uri("https://jitpack.io") }
 }
 
 dependencies {
@@ -30,6 +31,8 @@ dependencies {
     implementation("org.flywaydb:flyway-core:9.0.4")
     implementation("org.postgresql:postgresql:42.3.6")
     implementation("com.zaxxer:HikariCP:5.0.1")
+    implementation("com.github.papsign:Ktor-OpenAPI-Generator:0.3-beta.3")
+    implementation("io.ktor:ktor-server:$ktorVersion")
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
     implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")

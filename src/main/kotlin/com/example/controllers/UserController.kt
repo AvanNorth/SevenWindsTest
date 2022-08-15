@@ -34,7 +34,6 @@ class UserController {
     fun insert(user: UserDTO) {
         transaction {
             Users.insert {
-                it[id] = UUID.randomUUID()
                 it[email] = user.email
                 it[firstName] = user.firstName
                 it[lastName] = user.lastName

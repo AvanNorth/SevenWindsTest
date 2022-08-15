@@ -1,0 +1,20 @@
+openapi: "3.0.3"
+info:
+  title: "SevenWindsTest API"
+  description: "SevenWindsTest API"
+  version: "1.0.0"
+servers:
+  - url: "https://SevenWindsTest"
+paths:
+  /users/all:
+    get:
+      summary: "GET users/all"
+      responses:
+        "200":
+          description: "OK"
+  /users/new:
+    post:
+      summary: "POST users/new"
+      responses:
+        "200":
+          description: "OK"

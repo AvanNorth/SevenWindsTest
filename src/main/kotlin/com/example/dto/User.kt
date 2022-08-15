@@ -4,7 +4,7 @@ import org.jetbrains.exposed.sql.Table
 import java.util.*
 
 data class User(
-    val id: UUID = UUID.randomUUID(),
+    val id: Int,
     val email: String,
     val firstName: String,
     val lastName: String,
@@ -21,7 +21,7 @@ data class UserDTO(
 )
 
 object Users: Table() {
-    val id = uuid("id")
+    val id = integer("id")
     val email = text("email")
     val firstName = text("first_name")
     val lastName = text("second_name")
